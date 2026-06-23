@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#fff9db;
+    padding:40px;
+}
+
+h2{
+    color:#b8860b;
+    margin-bottom:25px;
+    font-size:38px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+th{
+    background:#ffd54f;
+    color:#6d4c00;
+    padding:15px;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #f1f1f1;
+}
+
+tr:hover{
+    background:#fffdf2;
+}
+
+/* Container Tombol Status */
+.status-action{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    justify-content:center;
+}
+
+/* Semua tombol */
+.status-btn{
+    text-decoration:none;
+    color:white;
+    padding:6px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.status-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* Warna */
+.pending{
+    background:#9e9e9e;
+}
+
+.diproses{
+    background:#ff9800;
+}
+
+.dikirim{
+    background:#2196f3;
+}
+
+.selesai{
+    background:#4caf50;
+}
+
+.batal{
+    background:#f44336;
+}
+
+/* Badge Status Saat Ini */
+.badge{
+    display:inline-block;
+    padding:7px 16px;
+    border-radius:999px;
+    color:white;
+    font-weight:600;
+}
+
+.badge.pending{
+    background:#9e9e9e;
+}
+
+.badge.diproses{
+    background:#ff9800;
+}
+
+.badge.dikirim{
+    background:#2196f3;
+}
+
+.badge.selesai{
+    background:#4caf50;
+}
+
+.badge.dibatalkan{
+    background:#f44336;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:20px;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}
+
+/* button back dashboard */
+.btn-dashboard{
+    display:inline-block;
+    margin-bottom:15px;
+    padding:10px 15px;
+    background:#007bff;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.btn-dashboard:hover{
+    background:#0056b3;
+}

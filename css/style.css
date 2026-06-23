@@ -1,0 +1,447 @@
+/* ==========================
+   ALL PAGE
+========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+
+html{
+    scroll-behavior:smooth;
+}
+body {
+    margin: 0;
+    background-color:rgb(255, 255, 233);
+    }
+
+/* ==========================
+   HOME PAGE
+========================== */
+
+.hero-gallery{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.hero-gallery img{
+    width:275px;
+    height:auto;
+    border-radius:15px;
+}
+
+.owner-container{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+    margin:50px 20px;
+}
+
+.owner-card{
+    width:400px;
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.owner-card h3{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.owner-card img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.owner-card p{
+    text-align:justify;
+    line-height:1.7;
+}
+
+.poster-section{
+    display:flex;
+    justify-content:center;
+    margin:50px 0;
+}
+
+.poster-section img{
+    width:333px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    gap: 30px;
+}
+
+/* ==========================
+   CUSTOM PAGE
+========================== */
+
+.custom-title{
+    text-align:center;
+    margin-top:30px;
+}
+
+.produk{
+    display:flex;
+    justify-content:center;
+    gap:100px;
+    margin-top:50px;
+    flex-wrap:wrap;
+}
+
+.p1,
+.p2{
+    text-align:center;
+}
+
+.p1 img,
+.p2 img{
+    border-radius:15px;
+    transition:.3s;
+}
+
+.p1 img:hover,
+.p2 img:hover{
+    transform:scale(1.05);
+}
+
+/* ==========================
+   FORM CUSTOM
+========================== */
+
+.form-container{
+    width:90%;
+    max-width:700px;
+    margin:auto;
+    margin-top:30px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:10px;
+}
+
+.form-group textarea{
+    resize:vertical;
+}
+
+.btn-primary{
+    background:#ff9ecb;
+    border:none;
+    padding:10px 20px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.btn-secondary{
+    background:#ddd;
+    border:none;
+    padding:10px 20px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* ==========================
+   POPUP CHECKOUT
+========================== */
+
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,.3);
+}
+
+.popup.show{
+    display:flex;
+}
+
+.popup-content{
+    width:320px;
+    background:#cfe8eb;
+    border-radius:20px;
+    padding:20px;
+    animation:fadeUp .3s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.popup-header{
+    display:flex;
+    gap:10px;
+    font-weight:bold;
+}
+
+.back{
+    cursor:pointer;
+}
+
+.product{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:15px;
+}
+
+.product img{
+    width:60px;
+    height:60px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+.product-info h4{
+    margin:0;
+}
+
+.product-info p{
+    color:red;
+}
+
+.qty{
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:white;
+    padding:5px 10px;
+    border-radius:30px;
+}
+
+.qty button{
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.qty button:active{
+    transform:scale(1.2);
+}
+
+.popup input,
+.popup textarea{
+    width:100%;
+    margin-top:10px;
+    padding:10px;
+    border:none;
+    border-radius:15px;
+}
+
+.popup-footer{
+    margin-top:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.checkout-btn{
+    border:none;
+    background:#f7a8c4;
+    padding:10px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.error{
+    border:2px solid red !important;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+    background:white;
+    margin-top:50px;
+    padding:30px;
+    text-align:center;
+}
+
+.contact-box{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.contact-item{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.info{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:10px 0;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .owner-card{
+        width:100%;
+    }
+
+    .produk{
+        gap:30px;
+    }
+
+    .contact-box{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+/* ==========================
+   CHECKOUT PAGE
+========================== */
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.6);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup.show{
+    display:flex;
+}
+
+.popup-content{
+    background:#cfe8eb;
+    width:450px;
+    max-width:90%;
+    padding:20px;
+    border-radius:15px;
+}
+
+.popup-header{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.back{
+    cursor:pointer;
+}
+
+.product{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.product img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.product-info{
+    flex:1;
+}
+
+.qty{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.qty button{
+    width:30px;
+    height:30px;
+    cursor:pointer;
+}
+
+.form input,
+.form textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+    box-sizing:border-box;
+}
+
+.popup-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:15px;
+}
+
+.checkout-btn{
+    background:#fd9873;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}

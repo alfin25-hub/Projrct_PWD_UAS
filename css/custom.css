@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Pingwin';
+    src: url('../font/Pingwin.ttf') format('truetype');
+}
+
+* {
+    font-family: 'Pingwin', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(255, 255, 233);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    padding: 25px;
+    z-index: 1000;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    background-color: white;
+    color: rgb(0, 170, 255);
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 0px;
+    padding: 5px 20px;
+}
+
+.btn:hover {
+    background-color: pink;
+    color: black;
+}
+
+.produk {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.p1 {
+    text-align: center;
+}
+
+.p2 {
+    text-align: center;
+}
+
+.judul {
+    text-align: center;
+}
+
+.footer {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 50px;
+}
+
+.contact-item {
+    text-align: left;
+    border: 2px solid #ddd;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}

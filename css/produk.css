@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#fff9db;
+    padding:40px;
+}
+
+/* Judul */
+h2{
+    color:#b8860b;
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+/* Tombol Tambah Produk */
+.btn-tambah{
+    display:inline-block;
+    background:#ffd54f;
+    color:#6d4c00;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:999px;
+    font-weight:600;
+    box-shadow:0 4px 10px rgba(255,193,7,.3);
+    transition:.3s;
+}
+
+.btn-tambah:hover{
+    background:#ffc107;
+    transform:translateY(-2px);
+}
+
+/* Tabel */
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+th{
+    background:#ffd54f;
+    color:#6d4c00;
+    padding:15px;
+    text-align:center;
+    font-size:16px;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #f1f1f1;
+}
+
+tr:hover{
+    background:#fffdf2;
+}
+
+img{
+    border-radius:12px;
+    object-fit:cover;
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
+}
+
+/* Tombol Edit */
+.btn-edit{
+    display:inline-block;
+    background:#66bb6a;
+    color:white;
+    text-decoration:none;
+    padding:8px 18px;
+    border-radius:999px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.btn-edit:hover{
+    background:#43a047;
+}
+
+/* Tombol Hapus */
+.btn-hapus{
+    display:inline-block;
+    background:#ef5350;
+    color:white;
+    text-decoration:none;
+    padding:8px 18px;
+    border-radius:999px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.btn-hapus:hover{
+    background:#d32f2f;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    body{
+        padding:20px;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}
+
+.btn-edit{
+    margin-right:8px;
+}

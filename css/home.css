@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Housemail Script Trial';
+    src: url('../font/Housemail Script Trial.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Caring Father';
+    src: url('../font/Caring Father.otf') format('opentype');
+}
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(255, 255, 233);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.gambar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.foto {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.foto img {
+    border: 2px solid #ddd;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    width: 350px;
+    text-align: center;
+}
+
+.judul {
+    margin-top: 10px;
+    font-size: 40px;
+    font-family: 'Housemail Script Trial';
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.card p {
+    text-align: justify;
+}
+
+.footer {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 50px;
+}
+
+.contact-item {
+    text-align: left;
+    border: 2px solid #ddd;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+.poster {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.text {
+    font-size: 30px;
+    font-family: 'Housemail Script Trial';
+}
