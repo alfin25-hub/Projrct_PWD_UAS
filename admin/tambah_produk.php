@@ -28,6 +28,7 @@ if(isset($_POST['simpan'])){
 ?>
 
 <h2>Tambah Produk</h2>
+<link rel="stylesheet" href="../css/tambah_prduk.css">
 
 <form method="POST" enctype="multipart/form-data">
 
