@@ -9,6 +9,8 @@ include "../security/admin_auth.php";
 
 include "../security/session.php";
 
+include "../koneksi.php";
+
 if(
     !isset($_SESSION['role']) ||
     $_SESSION['role'] != 'admin'
@@ -16,8 +18,6 @@ if(
     header("Location: ../login.php");
     exit;
 }
-
-include "../koneksi.php";
 
 $totalProduk = mysqli_num_rows(
     mysqli_query($conn,"SELECT * FROM product")

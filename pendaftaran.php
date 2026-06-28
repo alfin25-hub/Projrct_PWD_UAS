@@ -114,8 +114,6 @@ if(isset($_POST['register'])){
 
 <link rel="stylesheet" href="css/login.css">
 
-<!DOCTYPE html>
-<html>
 <head>
 <meta charset="UTF-8">
 <title>Pendaftaran</title>
@@ -123,85 +121,84 @@ if(isset($_POST['register'])){
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-<h2 align="center">Pendaftaran</h2>
+    <h2 align="center">Pendaftaran</h2>
 
-<br>
+    <br>   
 
-<p style="color:red;text-align:center;">
-<?php echo $message; ?>
-</p>
+    <p style="color:red;text-align:center;">
+    <?php echo $message; ?>
+    </p>
 
-<form method="POST">
+         <form method="POST">
 
-<input
-type="hidden"
-name="csrf_token"
-value="<?php echo $_SESSION['csrf_token']; ?>">
+            <input
+            type="hidden"
+            name="csrf_token"
+            value="<?php echo $_SESSION['csrf_token']; ?>">
 
-<input
-type="text"
-name="full_name"
-placeholder="Nama Lengkap"
-required>
+            <input
+            type="text"
+            name="full_name"
+            placeholder="Nama Lengkap"
+            required>
 
-<br><br>
+            <br><br>
 
-<input
-type="email"
-name="email"
-placeholder="Email"
-required>
+                <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required>
 
-<br><br>
+                <br><br>
 
-<input
-type="text"
-name="address"
-placeholder="Alamat"
-required>
+                <input
+                type="text"
+                name="address"
+                placeholder="Alamat"
+                required>
 
-<br><br>
+                <br><br>
 
-<input
-type="text"
-name="phone_number"
-placeholder="Nomor HP"
-required>
+                    <input
+                    type="text"
+                    name="phone_number"
+                    placeholder="Nomor HP"
+                    required>
 
-<br><br>
+                    <br><br>
 
-<input
-type="text"
-name="username"
-placeholder="Username"
-required>
+                        <input
+                        type="text"
+                        name="username"
+                        placeholder="Username"
+                        required>
 
-<br><br>
+                        <br><br>
 
-<input
-type="password"
-name="password"
-placeholder="Password"
-required>
+                            <input
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            required>
 
-<br><br>
+                            <br><br>
 
-<button type="submit" name="register">
-Daftar
-</button>
+                            <button type="submit" name="register">
+                            Daftar
+                            </button>
 
-</form>
+                            </form>
 
-<br><br>
+                            <br><br>
 
-<p align="center">
-Sudah punya akun?
-<a href="login.php">Login</a>
-</p>
+                            <p align="center">
+                            Sudah punya akun?
+                            <a href="login.php">Login</a>
+                            </p>
 
-</div>
+                            </div>
 
 </body>
-</html>
