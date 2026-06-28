@@ -3,6 +3,12 @@ session_start();
 
 include 'header.php';
 
+include "../security/security.php";
+
+include "../security/admin_auth.php";
+
+include "../security/session.php";
+
 if(
     !isset($_SESSION['role']) ||
     $_SESSION['role'] != 'admin'

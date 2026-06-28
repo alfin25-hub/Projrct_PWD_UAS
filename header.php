@@ -26,9 +26,9 @@ $full_name = isset($_SESSION['full_name'])
 </div>
 
 <div class="menu">
-    <a href="home.php">Home</a>
-    <a href="shop.php">Shop</a>
-    <a href="custom.php">Custom</a>
+    <a href="home.php">🏚️Home</a>
+    <a href="shop.php">🛍️Shop</a>
+    <a href="custom.php">📃Custom</a>
 
     <?php if(isset($_SESSION['id_users'])): ?>
         <a href="logout.php">Logout</a>

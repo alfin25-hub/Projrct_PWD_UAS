@@ -3,80 +3,181 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 session_start();
+
 include 'koneksi.php';
 include 'header.php';
+include "security/csrf.php";
 
 $message = "";
 
 if(isset($_POST['login'])){
 
-    $email = mysqli_real_escape_string($conn,$_POST['email']);
-    $password = md5($_POST['password']);
+    // =========================
+    // Validasi CSRF Token
+    // =========================
+    if(
+        !isset($_POST['csrf_token']) ||
+        !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])
+    ){
+        die("CSRF Token tidak valid!");
+    }
 
-    $query = mysqli_query($conn,
-        "SELECT * FROM users
-        WHERE email='$email'"
-    );
+    $email = trim($_POST['email']);
+    $password = $_POST['password'];
 
-    if(mysqli_num_rows($query) > 0){
+    // =========================
+    // Prepared Statement
+    // =========================
+    $stmt = mysqli_prepare($conn,
+        "SELECT * FROM users WHERE email=?");
 
-        $user = mysqli_fetch_assoc($query);
+    mysqli_stmt_bind_param($stmt,"s",$email);
 
-        if($password === $user['password']){
+    mysqli_stmt_execute($stmt);
+
+    $result = mysqli_stmt_get_result($stmt);
+
+    if(mysqli_num_rows($result) > 0){
+
+        $user = mysqli_fetch_assoc($result);
+
+        // =========================
+        // Verifikasi Password
+        // =========================
+        if(password_verify($password,$user['password'])){
+
+            // Regenerate Session
+            session_regenerate_id(true);
 
             $_SESSION['id_users'] = $user['id_users'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['full_name'] = $user['full_name'];
             $_SESSION['role'] = $user['role'];
 
-            if($user['role'] == 'admin'){
+            // =========================
+            // Simpan history login
+            // =========================
+            $ip = $_SERVER['REMOTE_ADDR'];
+            $browser = $_SERVER['HTTP_USER_AGENT'];
+
+            $history = mysqli_prepare($conn,
+            "INSERT INTO login_history
+            (id_users, ip_address, browser)
+            VALUES(?,?,?)");
+
+            mysqli_stmt_bind_param(
+                $history,
+                "iss",
+                $user['id_users'],
+                $ip,
+                $browser
+            );
+
+            mysqli_stmt_execute($history);
+
+            if($user['role']=="admin"){
+
                 header("Location: admin/dashboard.php");
+
             }else{
+
                 header("Location: home.php");
+
             }
 
             exit;
 
         }else{
-            $message = "Password salah!";
+
+            $message="Email atau Password salah.";
+
         }
 
     }else{
-        $message = "Email tidak ditemukan!";
+
+        $message="Email atau Password salah.";
+
     }
 
 }
 ?>
 
 <link rel="stylesheet" href="css/login.css">
+
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Login</title>
+
+<meta charset="UTF-8">
+
+<title>Login</title>
+
 </head>
+
 <body>
+
 <div class="container">
 
-<h2 align="center">Login</h2><br>
+<h2 align="center">Login</h2>
 
-<p><?php echo $message; ?></p>
+<br>
 
-<form method="POST">
-    
-    <input type="text" name="email" placeholder="Email" required><br><br>
+<p style="color:red;text-align:center;">
 
-    <input type="password" name="password" placeholder="Password" required><br><br>
+<?php echo $message; ?>
 
-    <button type="submit" name="login">
-        Login
-    </button>
-
-</form><br><br>
-
-<p align="center">
-    Belum punya akun?
-    <a href="pendaftaran.php">Daftar</a>
 </p>
 
+<form method="POST">
+
+<input
+type="hidden"
+name="csrf_token"
+value="<?php echo $_SESSION['csrf_token']; ?>">
+
+<input
+type="email"
+name="email"
+placeholder="Email"
+required>
+
+<br><br>
+
+<input
+type="password"
+name="password"
+placeholder="Password"
+required>
+
+<br><br>
+
+<button
+type="submit"
+name="login">
+
+Login
+
+</button>
+
+</form>
+
+<br><br>
+
+<p align="center">
+
+Belum punya akun?
+
+<a href="pendaftaran.php">
+
+Daftar
+
+</a>
+
+</p>
+
+</div>
+
 </body>
+
 </html>
