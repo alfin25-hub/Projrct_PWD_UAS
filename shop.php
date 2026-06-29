@@ -308,7 +308,7 @@ function checkout(){
         // BELUM LOGIN
         if(data=="login"){
 
-            alert("Silakan login terlebih dahulu!");
+            alert("😊Silakan login terlebih dahulu!😊");
             window.location.href="login.php";
             return;
         }

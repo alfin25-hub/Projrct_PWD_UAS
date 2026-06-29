@@ -6,7 +6,7 @@ include 'koneksi.php';
 if(!isset($_SESSION['id_users'])){
     echo "
     <script>
-        alert('Silakan login terlebih dahulu!');
+        alert('😊Silakan login terlebih dahulu!😊');
         window.location.href='login.php';
     </script>";
     exit();
