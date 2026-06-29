@@ -111,85 +111,63 @@ Jumlah : $jumlah";
 
 <form method="POST">
 
-
-<!-- <h3>Data Pelanggan</h3>
-
-
-<label>Nama Lengkap</label><br>
-<input type="text" name="nama" required>
-<br>
-
-
-
-<label>Nomor Telepon</label><br>
-<input type="text" name="telp" required>
-<br>
-
-
-<label>Alamat</label><br>
-<textarea name="alamat"></textarea>
-
-
-<br> -->
-
-
 <h3>Jenis Produk</h3>
 
-<label>
-<input type="radio" name="jenis" value="Amigurumi">
-Amigurumi
-</label>
+        <label>
+        <input type="radio" name="jenis" value="Amigurumi">
+        Amigurumi
+        </label>
 
-<label>
-<input type="radio" name="jenis" value="Hair Clip">
-Hair Clip
-</label>
+        <label>
+        <input type="radio" name="jenis" value="Hair Clip">
+        Hair Clip
+        </label>
 
-<br><br>
-<h3>Detail Custom</h3>
+        <br><br>
+        <h3>Detail Custom</h3>
 
-<br>
-<label>Deadline</label><br>
-<input type="date" name="deadline" required>
-
-
-<br>
-
-<label>Ukuran (cm)</label><br>
-<input type="text" name="ukuran">
+        <br>
+        <label>Deadline</label><br>
+        <input type="date" name="deadline" required>
 
 
-<br>
+        <br>
 
-<label>Warna Produk</label><br>
-<textarea name="warna"></textarea>
-
-
-
-<br>
-
-<label>Budget</label><br>
-<input type="text" name="budget">
+        <label>Ukuran (cm)</label><br>
+        <input type="text" name="ukuran">
 
 
-<br>
+        <br>
 
-<label>Request Khusus</label><br>
-<textarea name="request"></textarea>
+        <label>Warna Produk</label><br>
+        <textarea name="warna"></textarea>
 
 
-<br>
-<label>Jumlah Pesanan</label><br>
-<input type="number" name="jumlah">
+
+        <br>
+
+        <label>Budget</label><br>
+        <input type="text" name="budget">
+
+
+        <br>
+
+        <label>Request Khusus</label><br>
+        <textarea name="request"></textarea>
+
+
+        <br>
+        <label>Jumlah Pesanan</label><br>
+        <input type="number" name="jumlah">
 
 
 <br><br>
 <button name="checkout">
-Checkout
+🛒Checkout
 </button>
 
 <button type="reset" class="reset">
-Reset
+❌Reset
 </button>
 
 </form>

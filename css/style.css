@@ -292,10 +292,6 @@ body {
 /* ==========================
    FOOTER
 ========================== */
-@font-face {
-    font-family: 'Caring Father';
-    src: url('../font/Caring Father.otf') format('opentype');
-}
 
 .footer{
     background:white;
@@ -320,7 +316,6 @@ body {
 }
 
 .info{
-    font-family: 'Caring Father';
     display:flex;
     align-items:center;
     gap:10px;

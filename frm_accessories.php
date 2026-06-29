@@ -109,21 +109,6 @@ Jumlah : $jumlah";
     
 
     <form method="POST">
-    
-
-        <!-- <label>Nama Lengkap:</label><br>
-        <input type="text" name="nama" required>
-        <br><br>
-
-        <label>Nomor Telepon:</label><br>
-        <input type="text" name="telp" required>
-        <br><br>
-
-        <label>Alamat:</label><br>
-        <textarea name="alamat"></textarea> -->
-
-
-    
         <label>Jenis Produk:</label>
 
                 <div class="radio">
@@ -179,11 +164,11 @@ Jumlah : $jumlah";
 
 
     <button name="checkout">
-    Checkout
+    🛒Checkout
     </button>
 
     <button type="reset" class="reset">
-    Reset
+    ❌Reset
     </button>
 
 

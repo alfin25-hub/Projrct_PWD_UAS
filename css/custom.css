@@ -3,9 +3,6 @@
     src: url('../font/Pingwin.ttf') format('truetype');
 }
 
-* {
-    font-family: 'Pingwin', sans-serif;
-}
 
 body {
     margin: 0;

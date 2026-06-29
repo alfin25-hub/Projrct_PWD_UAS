@@ -16,7 +16,9 @@ $full_name = isset($_SESSION['full_name'])
 <div class="left-header">
 
     <div class="logo">
+        <a href="home.php">
         <img src="images/logo/logo.png" width="150">
+        </a>
     </div>
 
     <div class="welcome" >
@@ -31,9 +33,9 @@ $full_name = isset($_SESSION['full_name'])
     <a href="custom.php">📃Custom</a>
 
     <?php if(isset($_SESSION['id_users'])): ?>
-        <a href="logout.php">Logout</a>
+        <a href="logout.php">👤Logout</a>
     <?php else: ?>
-        <a href="login.php">Login</a>
+        <a href="login.php">👤Login</a>
     <?php endif; ?>
 </div>
 
