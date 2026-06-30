@@ -9,9 +9,9 @@ $query = mysqli_query(
 
 <link rel="stylesheet" href="../css/produk.css">
 
-<h2>Data Produk</h2>
+<h2 align ="center">Data Produk</h2>
 
-<a href="dashboard.php"
+<a align="center"  href="dashboard.php"
    style="
     display:inline-block;
     margin-bottom:15px;
