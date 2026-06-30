@@ -9,7 +9,7 @@ $query = mysqli_query(
 
 <link rel="stylesheet" href="../css/orders.css">
 
-<h2>Data User Terdaftar</h2>
+<h2 align="center">Data User Terdaftar</h2>
 
 <a href="dashboard.php"
    style="
