@@ -53,7 +53,9 @@ if(isset($_POST['update'])){
     header("Location: products.php");
 }
 ?>
-
+<h2 align= "center">Edit Produk</h2>
+<link rel="stylesheet" href="../css/edit_produk.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <form method="POST" enctype="multipart/form-data">
 
     Nama Produk<br>
