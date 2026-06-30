@@ -19,7 +19,7 @@ $query = mysqli_query($conn, $sql);
 
 <link rel="stylesheet" href="../css/orders.css">
 
-<h2>Data Custom Crochet</h2>
+<h2 align="center">Data Custom Crochet</h2>
 
 <a href="dashboard.php"
    style="
