@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Fredoka-Bold';
+    src: url('../font/Fredoka-Bold.ttf') format('truetype');
+}
 /* ==========================
    ALL PAGE
 ========================== */
@@ -444,4 +448,12 @@ body {
     padding:10px 20px;
     border-radius:8px;
     cursor:pointer;
+}
+
+h2 {
+    font-family: 'Fredoka-Bold';
+}
+
+.info {
+    font-family: 'Fredoka-Bold';
 }

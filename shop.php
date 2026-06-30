@@ -67,7 +67,7 @@ while($row = mysqli_fetch_assoc($query)){
             </p>
 
             <?php if(!empty($row['description'])){ ?>
-                <p><?= nl2br($row['description']); ?></p>
+                <p class="description"><?= nl2br($row['description']); ?></p>
             <?php } ?>
 
             <button
@@ -119,17 +119,17 @@ while($row = mysqli_fetch_assoc($query)){
 
         <div class="form">
 
-            <input
+            <input class="form"
                 type="text"
                 id="nama"
                 placeholder="Nama">
 
-            <input
+            <input class="form"
                 type="text"
                 id="telp"
                 placeholder="Nomor Telepon">
 
-            <textarea
+            <textarea class="form"
                 id="alamat"
                 placeholder="Alamat"></textarea>
 

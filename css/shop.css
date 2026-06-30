@@ -1,6 +1,7 @@
-/* ==========================
-   SHOP PAGE
-========================== */
+@font-face {
+    font-family: 'Fredoka-Bold';
+    src: url('../font/Fredoka-Bold.ttf') format('truetype');
+}
 
 .shop-container{
     padding:30px;
@@ -9,22 +10,21 @@
 .shop-title{
     text-align:center;
     margin-bottom:20px;
+    font-family: 'Fredoka-Bold';
 }
 
 #filter{
     display:flex;
     justify-content:flex-end;
     margin-bottom:20px;
+    font-family: 'Fredoka-Bold';
 }
 
 #filter select{
     padding:8px 12px;
     border-radius:10px;
+    font-family: 'Fredoka-Bold';
 }
-
-/* ==========================
-   PRODUCT GRID
-========================== */
 
 .grid{
     display:grid;
@@ -57,12 +57,13 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    font-family:Times New Roman, serif;
+    font-family:'Fredoka-Bold';
 }
 
 .card p{
     margin:10px 0;
     line-height:1.5;
+    font-family: 'Freddoka-Bold';
 }
 
 .card button{
@@ -75,8 +76,40 @@
     cursor:pointer;
     font-weight:bold;
     transition:.3s;
+    font-family:'Fredoka-Bold';
 }
 
 .card button:hover{
     background:#ff3057;
 }
+
+.harga {
+    font-family: 'Fredoka-Bold';
+}
+.description {
+    font-family: 'Fredoka-Bold';
+}
+.popup-header {
+    font-family: 'Fredoka-Bold';
+}
+
+.product-info {
+    font-family: 'Fredoka-Bold';
+}
+
+.form {
+    font-family: 'Fredoka-Bold';
+}
+
+.qty {
+    font-family: 'Fredoka-Bold';
+}
+
+.popup-footer {
+    font-family: 'Fredoka-Bold';
+}
+
+.checkout-btn {
+    font-family: 'Fredoka-Bold';
+}
+

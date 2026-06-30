@@ -16,6 +16,10 @@
     font-family: 'Caring Father';
     src: url('../font/Caring Father.otf') format('opentype');
 }
+@font-face {
+    font-family: 'Fredoka-Bold';
+    src: url('../font/Fredoka-Bold.ttf') format('truetype');
+}
 .navbar {
     background: #fff;
     padding: 20px 30px;
@@ -39,7 +43,7 @@ nav {
     display: flex;
     gap: 15px;
     justify-content: flex-end;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Fredoka-Bold', serif;
 }
 
 .menu a {
@@ -50,7 +54,7 @@ nav {
     padding: 10px 20px;
     border-radius: 50px;
     transition: .3s;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Fredoka-Bold', serif;
 }
 
 .menu a:hover {
@@ -62,7 +66,7 @@ nav {
     font-size: 30px;
     font-weight: bold;
     color: #ff69b4;
-    font-family: 'Caring Father';
+    font-family: 'Caring father';
 }
 
 .left-header {
