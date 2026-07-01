@@ -22,7 +22,7 @@ $full_name = isset($_SESSION['full_name'])
     </div>
 
     <div class="welcome" >
-        💖Welcome, <?= htmlspecialchars($full_name); ?> 💖
+        Welcome, <?= htmlspecialchars($full_name); ?> !!😊
     </div>
 
 </div>
