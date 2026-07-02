@@ -104,9 +104,6 @@ if(isset($_POST['login'])){
 
 <link rel="stylesheet" href="css/login.css">
 
-<!DOCTYPE html>
-<html>
-
 <head>
 
 <meta charset="UTF-8">
@@ -119,7 +116,7 @@ if(isset($_POST['login'])){
 
 <div class="container">
 
-<h2 align="center">Login</h2>
+<h2 align="center">Welcome</h2>
 
 <br>
 
@@ -136,7 +133,7 @@ type="hidden"
 name="csrf_token"
 value="<?php echo $_SESSION['csrf_token']; ?>">
 
-<input
+<input class="email"
 type="email"
 name="email"
 placeholder="Email"
@@ -144,7 +141,7 @@ required>
 
 <br><br>
 
-<input
+<input class="password"
 type="password"
 name="password"
 placeholder="Password"
@@ -155,9 +152,7 @@ required>
 <button
 type="submit"
 name="login">
-
 Login
-
 </button>
 
 </form>
@@ -179,5 +174,3 @@ Daftar
 </div>
 
 </body>
-
-</html>
