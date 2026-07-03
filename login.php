@@ -60,6 +60,20 @@ if(isset($_POST['login'])){
             $ip = $_SERVER['REMOTE_ADDR'];
             $browser = $_SERVER['HTTP_USER_AGENT'];
 
+            if (strpos($browser, 'Edg') !== false) {
+                $browser = 'Microsoft Edge';
+            } elseif (strpos($browser, 'Chrome') !== false) {
+                $browser = 'Google Chrome';
+            } elseif (strpos($browser, 'Firefox') !== false) {
+                $browser = 'Mozilla Firefox';
+            } elseif (strpos($browser, 'Opera') !== false || strpos($browser, 'OPR') !== false) {
+                $browser = 'Opera';
+            } elseif (strpos($browser   , 'Safari') !== false) {
+                $browser = 'Safari';
+            } else {
+                $browser = 'Browser Tidak Diketahui';
+            }
+
             $history = mysqli_prepare($conn,
             "INSERT INTO login_history
             (id_users, ip_address, browser)
