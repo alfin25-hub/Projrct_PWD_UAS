@@ -42,7 +42,7 @@ if(isset($_POST['login'])){
         $user = mysqli_fetch_assoc($result);
 
         // =========================
-        // Verifikasi Password
+        // untuk Verifikasi Password
         // =========================
         if(password_verify($password,$user['password'])){
 
@@ -55,22 +55,32 @@ if(isset($_POST['login'])){
             $_SESSION['role'] = $user['role'];
 
             // =========================
-            // Simpan history login
+            // Untuk catat login history
             // =========================
             $ip = $_SERVER['REMOTE_ADDR'];
             $browser = $_SERVER['HTTP_USER_AGENT'];
 
             if (strpos($browser, 'Edg') !== false) {
                 $browser = 'Microsoft Edge';
-            } elseif (strpos($browser, 'Chrome') !== false) {
+            } else
+
+            if (strpos($browser, 'Chrome') !== false) {
                 $browser = 'Google Chrome';
-            } elseif (strpos($browser, 'Firefox') !== false) {
+            } else
+
+            if (strpos($browser, 'Firefox') !== false) {
                 $browser = 'Mozilla Firefox';
-            } elseif (strpos($browser, 'Opera') !== false || strpos($browser, 'OPR') !== false) {
+            } else
+
+            if (strpos($browser, 'Opera') !== false || strpos($browser, 'OPR') !== false) {
                 $browser = 'Opera';
-            } elseif (strpos($browser   , 'Safari') !== false) {
+            } else
+
+            if (strpos($browser   , 'Safari') !== false) {
                 $browser = 'Safari';
-            } else {
+            } else 
+            
+            {
                 $browser = 'Browser Tidak Diketahui';
             }
 
@@ -90,27 +100,18 @@ if(isset($_POST['login'])){
             mysqli_stmt_execute($history);
 
             if($user['role']=="admin"){
-
                 header("Location: admin/dashboard.php");
-
             }else{
-
                 header("Location: home.php");
-
             }
 
             exit;
 
         }else{
-
             $message="Email atau Password salah.";
-
         }
-
     }else{
-
         $message="Email atau Password salah.";
-
     }
 
 }
@@ -128,63 +129,61 @@ if(isset($_POST['login'])){
 
 <body>
 
-<div class="container">
+    <div class="container">
+    <h2 align="center">Welcome</h2>
+    <br>
 
-<h2 align="center">Welcome</h2>
+    <p style="color:red;text-align:center;">
 
-<br>
+    <?php echo $message; ?>
 
-<p style="color:red;text-align:center;">
+    </p>
 
-<?php echo $message; ?>
+    <form method="POST">
 
-</p>
+    <input
+    type="hidden"
+    name="csrf_token"
+    value="<?php echo $_SESSION['csrf_token']; ?>">
 
-<form method="POST">
+    <input class="email"
+    type="email"
+    name="email"
+    placeholder="Email"
+    required>
 
-<input
-type="hidden"
-name="csrf_token"
-value="<?php echo $_SESSION['csrf_token']; ?>">
+    <br><br>
 
-<input class="email"
-type="email"
-name="email"
-placeholder="Email"
-required>
+    <input class="password"
+    type="password"
+    name="password"
+    placeholder="Password"
+    required>
 
-<br><br>
+    <br><br>
 
-<input class="password"
-type="password"
-name="password"
-placeholder="Password"
-required>
+    <button
+    type="submit"
+    name="login">
+    Login
+    </button>
 
-<br><br>
+    </form>
 
-<button
-type="submit"
-name="login">
-Login
-</button>
+    <br><br>
 
-</form>
+    <p align="center">
 
-<br><br>
+    Belum punya akun?
 
-<p align="center">
+    <a href="pendaftaran.php">
 
-Belum punya akun?
+    Daftar
 
-<a href="pendaftaran.php">
+    </a>
 
-Daftar
+    </p>
 
-</a>
-
-</p>
-
-</div>
+    </div>
 
 </body>
