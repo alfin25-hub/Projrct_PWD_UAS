@@ -4,7 +4,7 @@ if(session_status() == PHP_SESSION_NONE){
     session_start();
 }
 
-$timeout = 1800;
+$timeout = 43200; // 12 hours in seconds
 
 if(isset($_SESSION['LAST_ACTIVITY'])){
 
@@ -19,3 +19,4 @@ if(isset($_SESSION['LAST_ACTIVITY'])){
 }
 
 $_SESSION['LAST_ACTIVITY'] = time();
+?>
