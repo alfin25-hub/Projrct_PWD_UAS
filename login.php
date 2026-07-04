@@ -76,7 +76,7 @@ if(isset($_POST['login'])){
                 $browser = 'Opera';
             } else
 
-            if (strpos($browser   , 'Safari') !== false) {
+            if (strpos($browser, 'Safari') !== false) {
                 $browser = 'Safari';
             } else 
             
