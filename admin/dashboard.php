@@ -49,7 +49,7 @@ $totalPendapatan = mysqli_fetch_assoc(
 ?>
 <br>
 <head>
-    <title>👥 Dashboard Admin</title>
+    <title>Dashboard Admin</title>
     <link rel="stylesheet" href="../css/style2.css">
 </head>
 <body>
@@ -87,8 +87,8 @@ $totalPendapatan = mysqli_fetch_assoc(
     <a href="orders.php">🛍️ Kelola Pesanan</a>
     <a href="custom_accessories.php">📋 Kelola Custom Accessories</a>
     <a href="custom_chrochet.php">🧶 Kelola Custom Chrochet</a>
-    <a href="users.php">🗿 Data User</a>
-    <a href="../logout.php">🗿 Logout</a>
+    <a href="users.php">👥 Data User</a>
+    <a href="../logout.php">👤 Logout</a>
 </div>
 
 </body>
